@@ -1,3 +1,3 @@
 # Three.js Test
 
-https://eth9n-dev.github.io/index.html
+https://eth9n-dev.github.io/
