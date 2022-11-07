@@ -1,4 +1,3 @@
-# eth9n-dev.github.io
-Pages WIP
+# Three.js Test
 
-More to come.
+https://eth9n-dev.github.io/index.html
