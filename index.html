@@ -13,24 +13,82 @@
 			// Set up the scene
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
 			const renderer = new THREE.WebGLRenderer();
+			const clock = new THREE.Clock();
+
 			renderer.setSize(window.innerWidth, window.innerHeight);
 			document.body.appendChild(renderer.domElement);
 
-			// Add in a cube
-			const geometry = new THREE.BoxGeometry(1, 1, 1, 1);
-			const material = new THREE.MeshBasicMaterial({color: 0xffcece});
-			const cube = new THREE.Mesh(geometry, material);
+			// Adding a plane (GLSL way)
+			// Define uniform data
+			const uniformData = {
+				iTime: {
+					type: 'f',
+					value: clock.getElapsedTime(),
+				},
+				iResolution: {
+					value: new THREE.Vector3()
+				},
+			};
+			
+			// Mesh and shader
+			const planeGeometry = new THREE.PlaneGeometry(1, 1);
+			const planeMaterial = new THREE.ShaderMaterial({
+				wireframe: false,
+				uniforms: uniformData,
+				vertexShader: `
+				uniform float iTime;
+				varying vec2 vUv;
+				void main() {
+					gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x, position.y, position.z, 1.0);
+				}
+				`,
+				fragmentShader: `
+				uniform float iTime;
+				uniform vec3 iResolution;
+				varying vec2 vUv;
+				
+				#define ITR 100
 
-			scene.add(cube);
-			camera.position.z = 5;
+				float julia(vec2 uv){
+					int j;
+					for(int i=0;i<ITR;i++){
+						j++;
+						vec2 c=vec2(-0.345,0.654);
+						vec2 d=vec2(iTime*0.005,0.0);
+						uv=vec2(uv.x*uv.x-uv.y*uv.y,2.0*uv.x*uv.y)+c+d;
+						if(length(uv)>float(ITR)){
+							break;
+						}
+					}
+					return float(j)/float(ITR);
+				}
+
+				void mainImage(out vec4 fragColor,in vec2 fragCoord){
+					vec2 uv=(2.0*fragCoord.xy-iResolution.xy)/iResolution.y;
+
+					uv*=abs(sin(iTime*0.2));
+					float f=julia(uv);
+
+					fragColor=vec4(vec3(f),1.0);
+				}
+
+				void main()
+				{
+					mainImage(gl_FragColor, gl_FragCoord.xy);
+				}
+				`,
+			});
+			const planeMesh = new THREE.Mesh(planeGeometry, planeMaterial);
+			scene.add(planeMesh);
+
+			camera.position.z = 1;
 
 			function animate()
 			{
+				uniformData.iTime.value = clock.getElapsedTime();
+				uniformData.iResolution.value.set(window.innerWidth, window.innerHeight, 1);
 				requestAnimationFrame(animate);
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
 				renderer.render(scene, camera);
 			}
 			animate();
