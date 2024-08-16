@@ -38,9 +38,9 @@ For this enhancement, I used my CS340 (Advanced Programming Concepts) project th
 
 ### **Narratives**
 
-[Software Design Enhancement Narrative](https://github.com/eth9n-dev/CS499-Software-Design-Enhancement/blob/main/CS499%20Module%20Three%20Narrative.docx)
-[Algorithm Enhancement Narrative](https://github.com/eth9n-dev/Calculator/blob/master/Algorithms%20and%20Data%20Structures%20Enhancement%20Narrative.docx)
-[Database Enhancement Narrative](https://github.com/eth9n-dev/CS499-Database-Enhancement/blob/main/CS499%20Database%20Enhancement%20Narrative.docx)
+- [Software Design Enhancement Narrative](https://github.com/eth9n-dev/CS499-Software-Design-Enhancement/blob/main/CS499%20Module%20Three%20Narrative.docx)
+- [Algorithm Enhancement Narrative](https://github.com/eth9n-dev/Calculator/blob/master/Algorithms%20and%20Data%20Structures%20Enhancement%20Narrative.docx)
+- [Database Enhancement Narrative](https://github.com/eth9n-dev/CS499-Database-Enhancement/blob/main/CS499%20Database%20Enhancement%20Narrative.docx)
 
 ### **GitHub Pages Link**
 
