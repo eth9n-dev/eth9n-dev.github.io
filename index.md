@@ -2,9 +2,11 @@
 
 ## **Introduction**
 
-## **Education Review**
+My name is Ethan Eckert and I've been a student at SNHU for about two years. This ePortfolio represents my finalization of my Bachelor's degree for Computer Science. Throughout my time taking courses at SNHU, I've learned many new skills within Computer Science that will help further myself professionally within the field. The Software Development Lifecycle, Secure Programming, Advanced Programming Concepts, and Database Design are just a few of the key takeaways from my coursework at SNHU.
 
-## **Artifacts**
+As I went further into my coursework at SNHU, there were many different areas that I realized needed improvement as well. My previous coding projects were never pre-planned and very rarely commented. On top of that, many also remained unfinished. Throughout all of my courses at SNHU, I've developed much better habits for software development. These include pre-planning projects with outlines and diagrams, properly commenting code for better readability/reusability, secure coding techniques to prevent major exploits, and most importantly being open to feedback. Being self-critical in this field is a key factor and will allow myself to become a better developer if I'm open to criticism.
+
+This final capstone project allowed me to put together all of these developed skills and display them for potential employers. The three concentrations for the artifact enhancements are all extremely important factors of software development and I believe that I've created enhancements that properly showcase my skills in each category. One of my favorite enhancements in the ePortfolio was my Algorithms and Data Structure's enhancement because it was one of the first times I've used an open-source project on GitHub and successfully added a new feature or enhanced old ones. As for the other categories, I originally struggled with finding an artifact to enhance, but eventually decided on creating Desktop applications using Python frameworks. Creating different software for Desktop devices is a concentration of Computer Science that I'm very interested in and would like to pursue further.
 
 # **Code Review**
 
@@ -34,4 +36,12 @@ For this enhancement, I used my CS340 (Advanced Programming Concepts) project th
 
 [Enhancement Three Repo](https://github.com/eth9n-dev/CS499-Database-Enhancement)
 
+### **Narratives**
+
+[Software Design Enhancement Narrative](https://github.com/eth9n-dev/CS499-Software-Design-Enhancement/blob/main/CS499%20Module%20Three%20Narrative.docx)
+[Algorithm Enhancement Narrative]()
+[Database Enhancement Narrative](https://github.com/eth9n-dev/CS499-Database-Enhancement/blob/main/CS499%20Database%20Enhancement%20Narrative.docx)
+
 ### **GitHub Pages Link**
+
+[Pages](https://github.com/eth9n-dev/eth9n-dev.github.io)
